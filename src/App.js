@@ -75,7 +75,9 @@ class App extends Component {
 
   updateFav = (index, artwork) => {
     axios.put(`/api/albums/${index}`, { artwork }).then(res => {
-      this.setState({ userFavs: res.data, edit: false });
+      this.setState({
+        userFavs: res.data
+      });
     });
   };
 
@@ -94,20 +96,6 @@ class App extends Component {
         );
       });
     }
-
-    var userResults = this.state.userFavs.map((e, i) => {
-      return (
-        <UserFavs
-          key={i}
-          id={e.id}
-          artist={e.artist}
-          genre={e.genre}
-          artwork={e.artwork}
-          deleteFromFavsFn={this.deleteFromFavs}
-          updateFavFn={this.updateFav}
-        />
-      );
-    });
     return (
       <div className="App">
         <Header />
@@ -135,7 +123,12 @@ class App extends Component {
         </div>
         <div className="main">
           <div className="left-cont">{results}</div>
-          <div className="right-cont">{userResults}</div>
+          <div className="right-cont">
+            <UserFavs
+              userFavs={this.state.userFavs}
+              updateFavFn={this.updateFav}
+            />
+          </div>
         </div>
       </div>
     );

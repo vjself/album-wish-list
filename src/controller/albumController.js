@@ -14,9 +14,18 @@ module.exports = {
   },
 
   updateFavData(req, res) {
-    // const updateId = req.params.id;
-    // updateIndex = userFavs.findIndex(album => album.id == updateId);
-    // res.status(200).send(userFavs);
+    const { artwork } = req.body;
+    const updateId = req.params.id;
+    const updateIndex = userFavs.findIndex(album => album.id == updateId);
+    let album = userFavs[updateIndex];
+
+    userFavs[updateIndex] = {
+      id: album.id,
+      artist: album.artist,
+      genre: album.genre,
+      artwork: artwork || album.artwork
+    };
+    res.status(200).send(userFavs);
   },
 
   deleteFromFavs(req, res) {
