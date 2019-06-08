@@ -66,6 +66,7 @@
 .search-cont {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -75,6 +76,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 200px;
   min-width: 200px;
   min-height: 200px;
@@ -84,8 +86,8 @@
 
 .search-results img,
 .user-results img {
-  height: 199px;
-  width: 199px;
+  height: 198px;
+  width: 198px;
   margin: 20px 20px 0 20px;
 }
 

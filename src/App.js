@@ -127,6 +127,7 @@ class App extends Component {
             <UserFavs
               userFavs={this.state.userFavs}
               updateFavFn={this.updateFav}
+              deleteFromFavsFn={this.deleteFromFavs}
             />
           </div>
         </div>
