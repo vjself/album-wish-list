@@ -5,8 +5,6 @@ module.exports = {
     res.status(200).send(userFavs);
   },
 
-  filterFavAlbums(req, res) {},
-
   addToFavs(req, res) {
     const { id, artist, genre, artwork } = req.body;
     userFavs.push({ id, artist, genre, artwork });

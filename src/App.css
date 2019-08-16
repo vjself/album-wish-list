@@ -9,6 +9,10 @@
   background: cover;
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BLcOqevFirn3iyc5/triangles-background-modern-background-loop-animation_szs5m9iig_thumbnail-full01.png");
 }
+#click-info {
+  font-size: 16px;
+  color: white;
+}
 
 .App-header {
   display: flex;
@@ -76,7 +80,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 200px;
   min-width: 200px;
   min-height: 200px;
@@ -91,13 +94,19 @@
   margin: 20px 20px 0 20px;
 }
 
+.search-results img:hover,
+.user-results img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .search-input {
   width: 300px;
   text-align: center;
   border: 2px solid rgba(148, 148, 148, 0.5);
   font-size: 1.75em;
   padding: 0.25em 0.5em 0.3125em;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   border-radius: 0.25em;
   background: transparent;
   transition: all 0.1s;

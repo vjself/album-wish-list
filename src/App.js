@@ -121,6 +121,7 @@ class App extends Component {
             <h1>Your Favorites:</h1>
           </span>
         </div>
+        <span id="click-info">Click to add or remove album to favorites.</span>
         <div className="main">
           <div className="left-cont">{results}</div>
           <div className="right-cont">
